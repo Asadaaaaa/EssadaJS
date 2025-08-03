@@ -1,0 +1,49 @@
+{
+    "name": "essadajs",
+    "version": "1.0.0",
+    "description": "",
+    "type": "module",
+    "main": "./src/Main.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "start": "node .",
+        "dev": "nodemon ."
+    },
+    "imports": {
+        "#helpers": "./src/helpers/index.js",
+        "#middlewaresPrimaryV1": "./src/middlewares/index.js",
+        "#models": "./src/models/index.js",
+        "#routesPrimaryV1": "./src/routes/primary/v1/index.js",
+        "#controllersPrimaryV1": "./src/controllers/primary/v1/index.js",
+        "#validatorsPrimaryV1": "./src/validators/primary/v1/index.js",
+        "#repositoriesPrimaryV1": "./src/repositories/primary/v1/index.js",
+        "#servicesPrimaryV1": "./src/services/primary/v1/index.js"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "dependencies": {
+        "@aws-sdk/client-s3": "^3.850.0",
+        "@aws-sdk/s3-request-presigner": "^3.850.0",
+        "ajv": "^8.17.1",
+        "axios": "^1.7.7",
+        "bcryptjs": "^3.0.2",
+        "cluster": "^0.7.7",
+        "cors": "^2.8.5",
+        "decimal.js": "^10.4.3",
+        "dotenv": "^16.4.5",
+        "express": "^4.21.1",
+        "file-type": "^19.6.0",
+        "form-data": "^4.0.1",
+        "fs-extra": "^11.2.0",
+        "jsonwebtoken": "^9.0.2",
+        "moment-timezone": "^0.6.0",
+        "morgan": "^1.10.0",
+        "mysql2": "^3.2.0",
+        "nanoid": "^5.0.8",
+        "nodemailer": "^6.9.16",
+        "nodemon": "^3.1.7",
+        "qrcode": "^1.5.3",
+        "sequelize": "^6.37.5"
+    }
+}

@@ -1,0 +1,1 @@
+export { default as AuthValidator } from "./Auth.validator.js";
