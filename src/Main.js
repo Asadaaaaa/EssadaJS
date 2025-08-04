@@ -22,8 +22,16 @@ class Server {
         this.FS = FS;
 
         // .env config
+
+        // check if .env file exists
+        if (!this.FS.existsSync('.env')) {
+            this.sendLogs('Error: .env file not found. please use the .env.example file to create a new .env file');
+            return;
+        }
+
         dotenv.config();
         this.env = process.env;
+        
 
         this.serverThreads();
     }
