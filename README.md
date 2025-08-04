@@ -1,4 +1,9 @@
+
 # EssadaJS
+
+<p align="center">
+  <img src="./icon.png" alt="EssadaJS Icon" width="500">
+</p>
 
 A modern, scalable Node.js boilerplate with Express.js, featuring a well-structured architecture, built-in authentication, database integration, and comprehensive helper utilities.
 
