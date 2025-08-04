@@ -74,8 +74,15 @@ class Server {
 
         new MiddlewareHandler(this);
         new RouteHandler(this);
-
-        this.API.listen(this.env.PORT, this.env.IP, () => this.sendLogs(`Server Started, Listening PORT ${this.env.PORT}`));
+        //handler if port already in use
+        this.API.listen(this.env.PORT, this.env.IP, () => {
+            this.sendLogs(`Server Started, Listening PORT ${this.env.PORT}`);
+        }).on('error', (err) => {
+            if (err.code === 'EADDRINUSE') {
+                this.sendLogs(`Port ${this.env.PORT} is already in use`);
+                process.exit(1);
+            }
+        });
     }
 }
 
